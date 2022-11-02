@@ -32,7 +32,7 @@ describe ("getTodo('incomplete')", () => {
     it("return all incomplete toDo", () => {
         const gotAllTodo = getTodo("incomplete")
 
-        expect(gotAllTodo).toEqual(allTodo)
+        expect(gotAllTodo).toEqual(allTodo.filter(toDo => !toDo.completed))
     })
 })
 
